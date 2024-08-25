@@ -1,0 +1,24 @@
+{
+  "name": "@omnedia/ngx-gridpattern",
+  "description": "A simple component library to create a container with a pattern background.",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^18.2.0",
+    "@angular/core": "^18.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "npm",
+    "background",
+    "grid",
+    "pattern"
+  ],
+  "repository": {
+    "url": "https://github.com/omnedia/ngx-gridpattern"
+  },
+  "author": "Markus Block (markus.block@omnedia.com)",
+  "license": "MIT"
+}
