@@ -37,7 +37,13 @@ export class NgxGridpatternComponent {
   gridStyle: any = {};
 
   setGridStyle(): void {
-    const dataUri = `data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='${this.gridColor}' %3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e`;
+    let dataUri = '';
+
+    if (this.smallGrid) {
+      dataUri = `data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none' stroke='${this.gridColor}' %3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e`;
+    } else {
+      dataUri = `data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='${this.gridColor}' %3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e`;
+    }
     this.gridStyle["background-image"] = `url("${dataUri}")`;
     this.gridStyle["--om-gridpattern-gradient-color"] = this.gradientColor;
   }
