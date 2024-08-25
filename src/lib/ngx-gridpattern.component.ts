@@ -15,6 +15,9 @@ export class NgxGridpatternComponent {
   @Input("styleClass")
   styleClass?: string;
 
+  @Input("smallGrid")
+  smallGrid = false;
+
   @Input("gridColor")
   set gridColorValue(color: string) {
     this.gridColor = color;

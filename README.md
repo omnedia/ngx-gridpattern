@@ -52,6 +52,7 @@ Use the component in your template:
 <om-gridpattern
   [gridColor]="gridColor"
   [gradientColor]="gradientColor"
+  [smallGrid]="smallGrid"
   styleClass="your-custom-class"
 >
   <ng-content></ng-content>
@@ -60,6 +61,7 @@ Use the component in your template:
 
 - `gridColor` (optional): The color of the grid lines. Accepts any valid CSS color value (e.g., 'rgba(255, 255, 255, 0.5)').
 - `gradientColor` (optional): The background color of the gradient overlay. Accepts any valid CSS color value (e.g., '#ff69b4').
+- `smallGrid` (optional): Makes the grid columns smaller. Defaults to false.
 - `styleClass` (optional): A custom CSS class to apply to the .om-gridpattern container for additional styling.
 
 ## Example
