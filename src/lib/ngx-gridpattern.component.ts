@@ -1,21 +1,26 @@
-import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component, ElementRef, Input, ViewChild } from "@angular/core";
 
 @Component({
-  selector: 'om-gridpattern',
+  selector: "om-gridpattern",
   standalone: true,
   imports: [CommonModule],
   templateUrl: "./ngx-gridpattern.component.html",
   styleUrl: "./ngx-gridpattern.component.scss",
 })
 export class NgxGridpatternComponent {
-  @ViewChild('OmGridPatternBackground')
+  @ViewChild("OmGridPatternBackground")
   elementRef!: ElementRef<HTMLElement>;
 
   @Input("styleClass")
   styleClass?: string;
 
   @Input("smallGrid")
+  set smallGridValue(smallGrid: boolean) {
+    this.smallGrid = smallGrid;
+    this.setGridStyle();
+  }
+
   smallGrid = false;
 
   @Input("gridColor")
@@ -24,7 +29,7 @@ export class NgxGridpatternComponent {
     this.setGridStyle();
   }
 
-  gridColor: string = 'rgba(255, 255, 255, 0.2)';
+  gridColor: string = "rgba(255, 255, 255, 0.2)";
 
   @Input("gradientColor")
   set gradientColorValue(color: string) {
@@ -32,12 +37,12 @@ export class NgxGridpatternComponent {
     this.setGridStyle();
   }
 
-  gradientColor: string = 'rgb(0, 0, 0)';
+  gradientColor: string = "rgb(0, 0, 0)";
 
   gridStyle: any = {};
 
   setGridStyle(): void {
-    let dataUri = '';
+    let dataUri = "";
 
     if (this.smallGrid) {
       dataUri = `data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none' stroke='${this.gridColor}' %3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e`;
