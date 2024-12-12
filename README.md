@@ -1,5 +1,13 @@
 # ngx-gridpattern
 
+<a href="https://ngxui.com" target="_blank" style="display: flex;gap: .5rem;align-items: center;cursor: pointer; padding: 0 0 0 0; height: fit-content;">
+  <img src="https://ngxui.com/assets/img/ngxui-logo.png" style="width: 64px;height: 64px;">
+  <p style="font-weight: bold; padding: 0; margin: 0; font-size: 4rem">NGXUI</p>
+</a>
+
+This Library is part of the NGXUI ecosystem. <br>
+View all available components at https://ngxui.com
+
 `@omnedia/ngx-gridpattern` is an Angular library that provides a customizable grid pattern background. The component allows for the easy customization of grid and gradient colors, making it a great addition for adding visually engaging backgrounds to sections of your Angular application.
 
 ## Features
@@ -21,21 +29,23 @@ npm install @omnedia/ngx-gridpattern
 Import the `NgxGridpatternComponent` in your Angular module or component:
 
 ```typescript
-import { NgxGridpatternComponent } from '@omnedia/ngx-gridpattern';
+import {NgxGridpatternComponent} from '@omnedia/ngx-gridpattern';
 
 @Component({
   ...
-  imports: [
-    ...
-    NgxGridpatternComponent,
-  ],
+    imports:
+[
   ...
+    NgxGridpatternComponent,
+],
+...
 })
 ```
 
 Use the component in your template:
 
 ```html
+
 <om-gridpattern [gridColor]="'rgba(255, 255, 255, 0.5)'" [gradientColor]="'#ff69b4'" styleClass="custom-grid">
   <h1>Welcome to Grid Patterns</h1>
 </om-gridpattern>
@@ -49,6 +59,7 @@ Use the component in your template:
 ## API
 
 ```html
+
 <om-gridpattern
   [gridColor]="gridColor"
   [gradientColor]="gradientColor"
