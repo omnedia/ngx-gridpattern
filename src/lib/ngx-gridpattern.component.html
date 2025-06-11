@@ -1,6 +1,10 @@
 <div class="om-gridpattern" [ngClass]="styleClass">
-    <div class="om-gridpattern-background" [ngStyle]="gridStyle" [class.om-gridpattern-background-small]="smallGrid">
-        <div class="om-gridpattern-gradient"></div>
-    </div>
-    <ng-content></ng-content>
+  <div
+    class="om-gridpattern-background"
+    [style.background-image]="backgroundImage()"
+    [ngStyle]="gradientColor()"
+    [class.om-gridpattern-background-small]="smallGrid$()">
+    <div class="om-gridpattern-gradient"></div>
+  </div>
+  <ng-content></ng-content>
 </div>
